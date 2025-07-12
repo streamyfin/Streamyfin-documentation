@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Streamyfin documentation',
-  tagline: 'Dinosaurs are cool',
+  title: 'Streamyfin',
+  tagline: 'A modern Jellyfin client built with Expo for seamless streaming on iOS and Android',
   favicon: '/static/img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  //organizationName: 'facebook', // Usually your GitHub org/user name.
-  //projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'streamyfin', // Usually your GitHub org/user name.
+  projectName: 'Streamyfin-documentation', // Usually your repo name.
 
  // onBrokenLinks: 'throw',
  // onBrokenMarkdownLinks: 'warn',
@@ -60,7 +60,7 @@ const config: Config = {
     navbar: {
       title: 'Streamyfin Documentation',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Streamyfin',
         src: 'img/logo.svg',
       },
       items: [
@@ -68,11 +68,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Browse',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: 'News', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/streamyfin/streamyfin',
           label: 'GitHub',
           position: 'right',
         },
@@ -82,10 +82,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Start',
               to: '/docs/intro',
             },
           ],
@@ -94,34 +94,38 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Github',
+              href: 'https://github.com/streamyfin/streamyfin',
+            },
+            {
+              label: 'Website',
+              href: 'https://www.streamyfin.app',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://discord.gg/aJvAYeycyY',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Github',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'View Open Issues',
+              href: 'https://github.com/streamyfin/streamyfin/issues',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Feature reques',
+              href: 'https://github.com/streamyfin/streamyfin/issues/new?template=feature_request.md',
+            },
+            {
+              label: 'Report a bug',
+              href: 'https://github.com/streamyfin/streamyfin/issues/new?template=bug_report.yml',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `As experimental as your playlist`,
     },
     prism: {
       theme: prismThemes.github,

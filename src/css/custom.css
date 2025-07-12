@@ -6,25 +6,37 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #9334e9;
+  --ifm-color-primary-dark: #822fcf;
+  --ifm-color-primary-darker: #752ab8;
+  --ifm-color-primary-darkest: #612396;
+  --ifm-color-primary-light: #a754ec;
+  --ifm-color-primary-lighter: #b266ee;
+  --ifm-color-primary-lightest: #9334e9;
+
+  --ifm-footer-background-color: #0a0a0a;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #8a23ef;
+  --ifm-color-primary-dark: #b266ee;
+  --ifm-color-primary-darker: #a754ec;
+  --ifm-color-primary-darkest: #9334e9;
+  --ifm-color-primary-light: #d29bf5;
+  --ifm-color-primary-lighter: #e3baf9;
+  --ifm-color-primary-lightest: #f1d7fd;
+
+  --ifm-footer-background-color: #0a0a0a;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Quick hack to override footer colors since --ifm-footer-background-color doesn't apply reliably for some reason; remove once theme handles it properly. */
+
+.footer {
+  background-color: #0a0a0a !important;
+  color: #9334e9;
 }
