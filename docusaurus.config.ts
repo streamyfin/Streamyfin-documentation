@@ -70,7 +70,6 @@ const config: Config = {
           position: 'left',
           label: 'Browse',
         },
-        {to: '/blog', label: 'News', position: 'left'},
         {
           href: 'https://github.com/streamyfin/streamyfin',
           label: 'GitHub',
@@ -85,8 +84,8 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Start',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/docs/getting-started',
             },
           ],
         },
