@@ -9,7 +9,6 @@ Master the art of streaming with StreamyFin's powerful playback features.
 Navigate through your media library:
 - **Movies**: Browse by genre, year, or rating
 - **TV Shows**: Organized by series and seasons
-- **Music**: Browse by artist, album, or genre
 - **Search**: Find specific content quickly
 
 ### Play Controls
@@ -41,7 +40,6 @@ StreamyFin automatically adjusts quality based on:
 2. Select "Quality"
 3. Choose from available options:
    - Original (direct play)
-   - 1080p, 720p, 480p
    - Custom bitrates
 
 ### Subtitle Management
@@ -64,60 +62,6 @@ StreamyFin automatically adjusts quality based on:
 2. Choose from available audio tracks
 3. Select preferred language or format
 
-**Audio Features:**
-- Multi-channel audio support
-- Audio boost options
-- Sync adjustment controls
-- Codec information display
-
-## Music Playback
-
-### Music Player Interface
-
-**Now Playing Screen:**
-- Album artwork display
-- Progress bar and time
-- Shuffle and repeat controls
-- Volume and audio settings
-
-**Playlist Management:**
-- Add to queue
-- Create custom playlists
-- Shuffle play options
-- Repeat modes (off, one, all)
-
-### Background Playback
-
-Music continues playing when:
-- App is in background
-- Screen is locked
-- Using other apps
-- Device is in sleep mode
-
-**Lock Screen Controls:**
-- Play/pause button
-- Skip forward/backward
-- Track information
-- Album artwork
-
-## Advanced Playback Features
-
-### Chapter Navigation
-
-For content with chapters:
-- Tap the chapter icon
-- Select from chapter list
-- Auto-skip intro/outro (if configured)
-- Bookmark favorite chapters
-
-### Playback Speed
-
-Adjust playback speed:
-- 0.5x to 3x speed options
-- Pitch correction toggle
-- Speed memory per content type
-- Gesture shortcuts
-
 ### Picture-in-Picture (iOS)
 
 Continue watching while using other apps:
@@ -126,19 +70,6 @@ Continue watching while using other apps:
 3. Video continues in small window
 4. Tap window to return to full screen
 
-### Resume and Sync
-
-**Cross-Device Resume:**
-- Automatically saves playback position
-- Syncs across all devices
-- Resume from any StreamyFin client
-- Manual sync triggers available
-
-**Watch Status:**
-- Mark as watched/unwatched
-- Tracking progress percentage
-- Recently watched history
-- Continue watching shortcuts
 
 ## Streaming Optimization
 

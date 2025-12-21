@@ -13,11 +13,16 @@ Learn how to install StreamyFin on your device.
 
 ### TestFlight (Beta)
 
-For beta versions and early access:
+To access the Streamyfin beta, you need to subscribe to the Member tier (or higher) on [Patreon](https://www.patreon.com/streamyfin). This will give you immediate access to the ⁠#🧪-beta-releases and typing permissions in #⁠💬-beta-chat channels on Discord and we´ll know that you have subscribed. This is where we will post APKs and IPAs. APKs are also available via GitHub releases. This won't give automatic access to the TestFlight however, so you need to send @Cagemaster a DM with the email you use for Apple so that he can manually add you.
 
-1. Download TestFlight from the App Store if you haven't already
-2. Join the StreamyFin beta program (link will be provided)
-3. Install via TestFlight
+Steps to join:
+
+1. Subscribe to Member tier on [Patreon](https://www.patreon.com/streamyfin)
+2. Join the Discord server to access beta channels
+3. Download TestFlight from the App Store if you haven't already
+4. Send @Cagemaster a DM on Discord with your Apple ID email
+5. Wait for manual TestFlight invitation
+6. Install via TestFlight once invited
 
 ## Android Installation
 
@@ -32,7 +37,7 @@ For beta versions and early access:
 
 For direct APK installation:
 
-1. Download the latest APK from our releases page
+1. Download the latest APK from our [GitHub releases page](https://github.com/streamyfin/streamyfin/releases)
 2. Enable "Unknown sources" in your device settings
 3. Install the APK file
 4. Launch the app

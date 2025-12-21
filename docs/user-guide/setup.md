@@ -10,11 +10,11 @@ After installing the app, launch it from your device's home screen. You'll be gr
 
 ### Step 2: Add Your Server
 
-1. Tap **"Add Server"** or the **"+"** button
-2. Enter your server details:
-   - **Server Name**: A friendly name (e.g., "Home Server")
+
+1. Enter your server details: 
    - **Server Address**: Your Jellyfin server URL
-   - **Port**: Usually 8096 (default)
+   - **Port**: Usually 8096 (only necessary on local network)
+2. Tap **"Connect"**
 
 **Server Address Examples:**
 - Local network: `http://192.168.1.100:8096`
@@ -24,12 +24,9 @@ After installing the app, launch it from your device's home screen. You'll be gr
 ### Step 3: Sign In
 
 1. Enter your **username** and **password**
-2. Tap **"Sign In"**
+2. Tap **" Log In"**
 3. Wait for the connection to be established
 
-### Step 4: Choose Your Profile
-
-If your server has multiple user profiles, select the appropriate one for your device.
 
 ## Server Connection Types
 
@@ -57,15 +54,7 @@ For secure connections:
 3. Install proper SSL certificates
 4. Some features require HTTPS (like PWA)
 
-## User Profiles and Libraries
-
-### Multiple Users
-
-StreamyFin supports multiple user accounts:
-- Each user has their own watch history
-- Separate continue watching lists
-- Individual preferences and settings
-- Parental controls per user
+## Libraries
 
 ### Library Access
 
@@ -74,34 +63,6 @@ Your available content depends on:
 - User permissions
 - Content ratings and parental controls
 - Library sharing settings
-
-## Initial Settings Configuration
-
-### Streaming Quality
-
-Configure quality based on your connection:
-
-**For WiFi:**
-- Set to "Original" or "High" for best quality
-- Enable hardware acceleration if available
-
-**For Mobile Data:**
-- Set to "Medium" or "Low" to save data
-- Enable data usage warnings
-
-### Download Settings
-
-Configure offline downloads:
-- Choose default download quality
-- Set download location (if available)
-- Configure automatic cleanup
-
-### Playback Settings
-
-Customize your viewing experience:
-- Enable/disable auto-play next episode
-- Configure subtitle preferences
-- Set audio language priorities
 
 ## Troubleshooting Setup Issues
 
