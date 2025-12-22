@@ -124,7 +124,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `As experimental as your playlist`,
+      copyright: `Copyright © ${new Date().getFullYear()} Streamyfin. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

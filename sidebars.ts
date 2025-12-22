@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
     'getting-started',
     'installation',
     'features',
+    'beta-testing',
     {
       type: 'category',
       label: 'User Guide',
@@ -34,9 +35,11 @@ const sidebars: SidebarsConfig = {
       label: 'Advanced Topics',
       items: [
         'advanced/troubleshooting',
+        'advanced/streamyfin-plugin',
         'advanced/seerr-integration',
         'advanced/jellysearch',
         'advanced/plugin',
+        'advanced/optimized-versions-server',
       ],
     },
     {

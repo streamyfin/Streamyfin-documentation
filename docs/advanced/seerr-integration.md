@@ -1,6 +1,6 @@
 # Seerr Integration
 
-Integrate StreamyFin with Seerr to request new content directly from your mobile device.
+Integrate Streamyfin with Seerr (formerly Jellyseerr) to request new content directly from your mobile device.
 
 ## What is Seerr?
 
@@ -10,24 +10,60 @@ Seerr is a content discovery and request management system that works with media
 - Track request status and availability
 - Get notifications when content is ready
 
-## Setting Up Seerr Integration
+**Recent Changes**: Jellyseerr was recently forked and renamed to "Seerr" by the community. Both versions are supported by Streamyfin.
+
+## Automatic Integration with Plugin
+
+### Streamyfin Plugin Setup
+
+The easiest way to enable Seerr integration is through the [Streamyfin Plugin](streamyfin-plugin.md):
+
+**Benefits of Plugin Integration:**
+- **Automatic Login**: Users log in automatically with Jellyfin credentials
+- **Zero Configuration**: No manual setup required for users
+- **Centralized Management**: Admins control settings for all users
+- **Enhanced Security**: Secure credential handling
+
+**Plugin Configuration:**
+```yaml
+jellyseerr:
+  enabled: true
+  url: "https://requests.yourdomain.com"
+  apiKey: "your-jellyseerr-api-key"
+  autoLogin: true
+```
+
+### Requirements for Automatic Login
+
+**Server Setup:**
+- Seerr/Jellyseerr configured with Jellyfin authentication
+- Streamyfin Plugin installed and configured
+- Same user accounts in both Jellyfin and Seerr
+
+**How It Works:**
+1. User opens Streamyfin app
+2. Plugin provides Seerr credentials automatically
+3. User gains immediate access to Seerr features
+4. No manual configuration needed
+
+## Manual Setup (Without Plugin)
 
 ### Prerequisites
 
 **Server Requirements:**
 - Seerr server installed and configured
 - Jellyfin server connected to Seerr
-- Network access between StreamyFin and Seerr
+- Network access between Streamyfin and Seerr
 - Valid user account in Seerr
 
-**StreamyFin Requirements:**
-- StreamyFin version 2.0 or later
+**Streamyfin Requirements:**
+- Streamyfin version 2.0 or later
 - Active Jellyfin server connection
 - Network permissions enabled
 
 ### Configuration Steps
 
-**1. Enable Seerr in StreamyFin**
+**1. Enable Seerr in Streamyfin**
 ```
 Settings → Advanced → Integrations → Seerr
 ✓ Enable Seerr Integration
@@ -54,6 +90,14 @@ Connection Timeout: 30 seconds
 
 ## Using Seerr Features
 
+### In-App Integration
+
+**Seamless Experience:**
+- **Request Button**: Appears on media pages not in your library
+- **Browse Requests**: Dedicated Seerr section in app
+- **Search Integration**: Search results show requestable content
+- **Status Tracking**: Monitor request progress from app
+
 ### Content Discovery
 
 **Browse Popular Content:**
@@ -64,10 +108,10 @@ Connection Timeout: 30 seconds
 - Search functionality
 
 **Detailed Information:**
-- Movie/show descriptions
+- Movie/show descriptions and metadata
 - Cast and crew details
 - Trailer integration
-- Rating information
+- Rating information from multiple sources
 - Availability status
 
 ### Making Requests
@@ -81,48 +125,78 @@ Connection Timeout: 30 seconds
    - Check trending lists
 
 2. **Submit Request:**
-   - Select content quality
-   - Choose download location
-   - Set priority level
-   - Add request notes
+   - Tap "Request" button on content
+   - Select content quality (if configured)
+   - Choose seasons/episodes for TV shows
+   - Add optional request notes
 
 3. **Track Progress:**
-   - Monitor request status
-   - Get availability notifications
+   - Monitor request status in app
+   - Get push notifications for updates
    - View download progress
    - Cancel requests if needed
 
 **Request Types:**
 - **Movies**: Single request per movie
-- **TV Shows**: Request specific seasons/episodes
+- **TV Shows**: Request specific seasons or episodes
 - **Anime**: Special anime category support
-- **Music**: Album and artist requests (if configured)
+- **Collections**: Request entire movie collections
 
 ### Request Management
 
-**Your Requests:**
+**Your Requests Section:**
 - View all your pending requests
 - Check request approval status
 - Monitor download progress
 - Manage request priorities
+- Cancel pending requests
 
-**Request Status:**
+**Request Status Indicators:**
 - **Pending**: Awaiting approval
 - **Approved**: Being processed
 - **Downloading**: Content being fetched
-- **Available**: Ready to watch
+- **Available**: Ready to watch in your library
 - **Failed**: Request encountered error
 
 ## Advanced Features
 
+### Quality Profiles
+
+**Configure Download Quality:**
+- 4K/UHD preferences for compatible content
+- 1080p/HD standard quality
+- 720p/SD options for space saving
+- Custom bitrate and codec settings
+- Storage optimization preferences
+
+**Profile Management:**
+- Default quality per content type
+- Network-based quality selection
+- Server transcoding capability consideration
+- Storage space optimization
+
+### User Quotas and Limits
+
+**Request Limits (Admin Configured):**
+- Daily request quota
+- Monthly request limits
+- Quality restrictions by user
+- Content size limitations
+
+**Quota Monitoring:**
+- Current usage display in app
+- Remaining requests counter
+- Reset schedule information
+- Request history tracking
+
 ### Notification Integration
 
-**Request Notifications:**
-- New request submitted
-- Request approved/denied
-- Download started
-- Content available
-- Request failed
+**Push Notifications:**
+- New request submitted confirmation
+- Request approved/denied alerts
+- Download started notifications
+- Content available alerts
+- Request failed error notifications
 
 **Notification Settings:**
 ```
@@ -133,204 +207,212 @@ Settings → Notifications → Seerr
 ✓ Error notifications
 ```
 
-### Quality Profiles
-
-**Configure Download Quality:**
-- 4K/UHD preferences
-- 1080p/HD standard
-- 720p/SD options
-- Custom bitrate settings
-- Storage optimization
-
-**Profile Management:**
-- Default quality per content type
-- Network-based quality selection
-- Storage space considerations
-- Server transcoding capabilities
-
-### User Quotas and Limits
-
-**Request Limits:**
-- Daily request quota
-- Monthly request limits
-- Quality restrictions
-- Size limitations
-
-**Quota Monitoring:**
-- Current usage display
-- Remaining requests
-- Reset schedule
-- Quota history
-
 ## Integration Benefits
 
-### Seamless Workflow
+### Streamlined Workflow
 
 **Unified Experience:**
-- Request from within StreamyFin
-- No need to switch apps
-- Integrated search results
-- Direct content access
+- Request content without leaving Streamyfin
+- Integrated search shows both library and requestable content
+- Direct access to requested content once available
+- Consistent UI/UX with rest of app
 
-**Smart Recommendations:**
-- Based on viewing history
-- Consider current library
-- Suggest similar content
-- Popular with friends
+**Smart Features:**
+- **Duplicate Prevention**: Won't request content already in library
+- **Season Management**: Request missing seasons automatically
+- **Quality Matching**: Matches your server's quality standards
+- **Deep Linking**: Notifications link directly to content
 
 ### Enhanced Discovery
 
-**Discovery Features:**
-- Trending content integration
-- Personalized recommendations
-- Social features (if enabled)
-- Cross-platform suggestions
+**Discovery Integration:**
+- Trending content from Seerr in app homepage
+- Personalized recommendations based on viewing history
+- Popular requests from other users
+- Cross-platform content suggestions
 
-**Content Information:**
-- Rich metadata display
-- Trailer integration
-- Cast and crew details
+**Rich Metadata:**
+- Detailed content information
+- High-quality artwork and backdrops
+- Trailer integration and previews
+- Cast and crew information
 - Related content suggestions
-
-## Troubleshooting Seerr Integration
-
-### Connection Issues
-
-**Cannot Connect to Seerr:**
-```
-✓ Verify Seerr server URL
-✓ Check API key validity
-✓ Test network connectivity
-✓ Confirm server is running
-```
-
-**Authentication Problems:**
-```
-✓ Verify user credentials
-✓ Check account permissions
-✓ Ensure user is not disabled
-✓ Test login via web interface
-```
-
-### Request Issues
-
-**Requests Not Appearing:**
-- Check user permissions
-- Verify quota availability
-- Ensure content not already available
-- Check request approval settings
-
-**Download Failures:**
-- Verify indexer configuration
-- Check download client setup
-- Monitor storage space
-- Review quality profile settings
-
-### Performance Optimization
-
-**Improve Response Times:**
-- Use local Seerr installation
-- Configure appropriate timeouts
-- Enable request caching
-- Optimize network settings
-
-**Resource Management:**
-- Monitor API rate limits
-- Balance request frequency
-- Cache metadata locally
-- Optimize image loading
 
 ## Administrative Features
 
 ### Server Management
 
 **Admin Controls:**
-- User request monitoring
-- Quota management
-- Quality profile configuration
-- Download path management
+- Monitor all user requests
+- Approve/deny requests in bulk
+- Configure user quotas and permissions
+- Set quality profiles per user
+- Manage download clients and paths
 
-**Analytics and Reporting:**
-- Request statistics
+**Analytics Dashboard:**
+- Request statistics and trends
 - User activity monitoring
 - Popular content tracking
 - Server performance metrics
+- Storage usage analysis
 
-### Integration Settings
+### Plugin Configuration
 
-**Advanced Configuration:**
+**Advanced Settings:**
 ```yaml
 seerr:
-  server_url: "https://seerr.example.com"
-  api_key: "your-api-key-here"
+  enabled: true
+  url: "https://requests.example.com"
+  apiKey: "${SEERR_API_KEY}"
+  autoLogin: true
   timeout: 30
-  retry_attempts: 3
-  cache_duration: 3600
-  user_agent: "StreamyFin/2.0"
+  retryAttempts: 3
+  cacheDuration: 3600
+  notifications:
+    enabled: true
+    types: ["approved", "available", "failed"]
+  qualityProfiles:
+    movie: "HD-1080p"
+    tv: "HD-720p"
+  userQuotas:
+    default:
+      daily: 10
+      monthly: 50
+    vip:
+      daily: 20
+      monthly: 100
 ```
+
+## Troubleshooting
+
+### Connection Issues
+
+**Cannot Connect to Seerr:**
+```
+✓ Verify Seerr server URL and accessibility
+✓ Check API key validity and permissions
+✓ Test network connectivity from device
+✓ Confirm Seerr server is running
+✓ Check firewall and port settings
+```
+
+**Authentication Problems:**
+```
+✓ Verify user credentials in Seerr
+✓ Check Jellyfin account permissions
+✓ Ensure user is not disabled
+✓ Test login via Seerr web interface
+✓ Verify Jellyfin auth is enabled
+```
+
+### Request Issues
+
+**Requests Not Appearing:**
+- Check user permissions in Seerr
+- Verify quota availability
+- Ensure content not already in library
+- Check request approval settings
+- Review user role permissions
+
+**Request Failures:**
+- Verify download client configuration
+- Check indexer setup and connectivity
+- Monitor available storage space
+- Review quality profile compatibility
+- Check content availability on indexers
+
+### Performance Optimization
+
+**Improve Response Times:**
+- Use local network for Seerr when possible
+- Configure appropriate connection timeouts
+- Enable request and metadata caching
+- Optimize image loading and caching
+- Use CDN for artwork if available
+
+**Resource Management:**
+- Monitor API rate limits
+- Balance request frequency
+- Implement proper caching strategies
+- Optimize database performance
+- Use efficient search algorithms
 
 ## Security Considerations
 
-### API Key Security
+### API Security
 
 **Best Practices:**
-- Use read-only API keys when possible
+- Use dedicated API keys for Streamyfin
+- Set minimal required permissions
 - Rotate API keys regularly
-- Don't share API keys
-- Monitor API key usage
+- Monitor API usage and abuse
+- Implement rate limiting
 
 **Access Control:**
-- Limit user permissions appropriately
 - Use HTTPS for all connections
-- Implement proper authentication
+- Verify SSL certificates
+- Implement proper user authentication
 - Monitor unauthorized access attempts
+- Regular security audits
 
 ### Network Security
 
 **Connection Security:**
-- Use HTTPS/TLS encryption
-- Verify SSL certificates
+- Always use HTTPS/TLS encryption
+- Verify SSL certificate validity
+- Use VPN for remote access
 - Avoid public Wi-Fi for admin tasks
-- Monitor network traffic
+- Monitor network traffic for anomalies
+
+## Migration from Jellyseerr
+
+### Transitioning to Seerr
+
+**Migration Steps:**
+1. Export your Jellyseerr configuration and data
+2. Install and configure Seerr
+3. Import your data and settings
+4. Update Streamyfin Plugin configuration
+5. Test integration and functionality
+
+**Data Migration:**
+- User accounts and permissions
+- Request history and status
+- Quality profiles and settings
+- Notification configurations
+- API keys and integrations
 
 ## Future Enhancements
 
 ### Planned Features
 
 **Enhanced Integration:**
-- Real-time notifications
-- Advanced filtering options
-- Collaborative requests
-- Social features
+- Real-time bidirectional sync
+- Advanced filtering and search
+- Collaborative request features
+- Social discovery features
+- Offline request queuing
 
 **Mobile Optimizations:**
-- Offline request queuing
-- Background sync
-- Push notifications
-- Widget support
-
-### Community Features
-
-**Social Integration:**
-- Friend recommendations
-- Request sharing
-- Watchlist collaboration
-- Community ratings
+- Background sync capabilities
+- Widget support for quick requests
+- Apple Watch integration
+- Voice request support
+- Improved accessibility
 
 ## Support and Resources
 
 ### Documentation
 - [Seerr Official Documentation](https://docs.seerr.dev)
-- [API Reference Guide](https://api.seerr.dev)
-- [Configuration Examples](https://github.com/seerr/seerr)
+- [Streamyfin Plugin Guide](streamyfin-plugin.md)
+- [Jellyfin Integration Guide](../user-guide/setup.md)
 
 ### Community Support
-- Seerr Discord server
-- GitHub discussions
-- Community forums
-- Video tutorials
+- [Streamyfin Discord](https://discord.gg/BuGG9ZNhaE)
+- [Seerr Community](https://github.com/seerr-team/seerr)
+- [GitHub Discussions](https://github.com/streamyfin/streamyfin/discussions)
 
 ### Troubleshooting Resources
-- [Connection troubleshooting](troubleshooting.md)
-- [Network diagnostics](troubleshooting.md#network-diagnostics)
-- [Server integration guide](../development/setup.md)
+- [Connection Troubleshooting](troubleshooting.md)
+- [Network Diagnostics](troubleshooting.md#network-diagnostics)
+- [Server Setup Guide](../development/setup.md)
